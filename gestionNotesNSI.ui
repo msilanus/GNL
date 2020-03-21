@@ -1,0 +1,1624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>986</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>4</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>GNL - Gestion de Notes Lycée</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabApplication">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="QWidget" name="tabAdministration">
+      <attribute name="title">
+       <string>Administration</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Classes</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="text">
+                 <string>Année scolaire :</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cbFiltreAnnee"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="text">
+                 <string>Niveau :</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cbFiltreNiveau"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,1">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Classe</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Niveau</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Professeur principal</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,1,1">
+            <item>
+             <widget class="QLineEdit" name="leClasse">
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbNiveau"/>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbProfPrincipal"/>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="1,1,1">
+            <item>
+             <widget class="QPushButton" name="pbAjouterClasse">
+              <property name="text">
+               <string>Ajouter</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbSupprimerClasse">
+              <property name="text">
+               <string>Supprimer</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbModifierClasse">
+              <property name="text">
+               <string>Modifier</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0" rowspan="4">
+           <widget class="QTableWidget" name="twClasses">
+            <property name="columnCount">
+             <number>4</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Matières</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,2">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Libellé de la matière : </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="leLibelleMatiere"/>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0" rowspan="3">
+           <widget class="QTableWidget" name="twMatieres">
+            <property name="columnCount">
+             <number>2</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>150</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Description : </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="leDescriptionMatiere"/>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1,1">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QPushButton" name="pbAjouterMatiere">
+                <property name="text">
+                 <string>Ajouter</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QPushButton" name="pbSupprimerMatiere">
+                <property name="text">
+                 <string>Supprimer</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QPushButton" name="pbModifierMatiere">
+                <property name="text">
+                 <string>Modifier</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Professeurs</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0" rowspan="2">
+           <widget class="QTableWidget" name="twProfesseurs">
+            <property name="columnCount">
+             <number>3</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>150</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>120</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,2">
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>NUMEN :</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="leIdProfesseur"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,2">
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Nom : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="leNomProfesseur"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,2">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Prénom : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lePrenomProfesseur"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,1">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QPushButton" name="pbAjouterProfesseur">
+                <property name="text">
+                 <string>Ajouter</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <widget class="QPushButton" name="pbSupprimerProfesseur">
+                <property name="text">
+                 <string>Supprimer</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <widget class="QPushButton" name="pbModifierProfesseur">
+                <property name="text">
+                 <string>Modifier</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>Elèves</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="twAdministrationEleves">
+            <property name="columnCount">
+             <number>4</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>115</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>50</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,2,1,1">
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>INE : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="leIdEleve"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Classe : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cbAdministrationClasse"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,2">
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Nom : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="leNomEleve"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,2">
+              <item>
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Prénom : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lePrenomEleve"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,1,1">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_14">
+                <item>
+                 <widget class="QPushButton" name="pbAjouterEleve">
+                  <property name="text">
+                   <string>Ajouter</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_15">
+                <item>
+                 <widget class="QPushButton" name="pbSupprimerEleve">
+                  <property name="text">
+                   <string>Supprimer</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <item>
+                 <widget class="QPushButton" name="pbModifierEleve">
+                  <property name="text">
+                   <string>Modifier</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabProfesseur">
+      <attribute name="title">
+       <string>Professeur</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_17">
+       <item>
+        <widget class="QGroupBox" name="gbIdentificationProfesseur">
+         <property name="title">
+          <string>Identification :</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>Professeur :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbIdentificationProfesseur">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_20">
+              <property name="text">
+               <string>Classe :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbSelectionClasseProfesseur">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Matières  :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbSelectionMatiereProfesseur">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbIdentificationProfesseur_3">
+         <property name="title">
+          <string>Ajouter/Suprimer un devoir</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="1,2,2">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>Devoir à ajouter :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="leNouveauDevoir">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbAjouterDevoir">
+              <property name="text">
+               <string>Ajouter</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="1,2,2">
+            <item>
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>Devoir à supprimer :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbSelectionDevoirSupprimer">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>1</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbSupprimerDevoir">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>1</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Supprimer</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbIdentificationProfesseur_2">
+         <property name="title">
+          <string>Notes</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="1,2,2">
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Sélectionner un devoir :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbDevoirSelectionDevoirEnregistrerNotes">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                <horstretch>1</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbEnregistrerNotes">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Enregistrer</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="twProfesseurAfficherNotes">
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="columnCount">
+             <number>6</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>160</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAssociation">
+      <attribute name="title">
+       <string>Association</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_19">
+       <item>
+        <widget class="QGroupBox" name="gbIdentificationProfesseur_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Identification :</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="1,2,1,4">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>Professeur :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbAssociationProfesseur">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>NUMEN : </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblNUMEN">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbEnseigne">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Enseigne</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_21"/>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabEleve">
+      <attribute name="title">
+       <string>Eleve</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_23">
+       <item>
+        <widget class="QGroupBox" name="gbIdentificationEleve">
+         <property name="title">
+          <string>Identification :</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_20">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_23">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_22">
+              <property name="text">
+               <string>Classe :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbSelectionClasseEleve">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>Elève : </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbIdentificationEleve">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_23">
+              <property name="text">
+               <string>Matières  :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbSelectionMatiereEleve">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbNotesEleve">
+         <property name="title">
+          <string>Notes</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_22">
+          <item>
+           <widget class="QTableWidget" name="twEleveAfficherNotes">
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="columnCount">
+             <number>5</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>190</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cbFiltreAnnee</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_change_annee(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>737</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>997</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSupprimerClasse</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbSupprimerClasse_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>777</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>997</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbFiltreNiveau</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_change_niveau(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>978</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>997</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>twClasses</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_administration_selection_classe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbAjouterClasse</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbAjouterClasse_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>997</x>
+     <y>196</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbModifierClasse</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbModifierClasse_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>937</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1000</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>twMatieres</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_administration_selection_matiere()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbAjouterMatiere</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbAjouterMatiere_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>617</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>988</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSupprimerMatiere</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbSupprimerMatiere_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>778</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>989</x>
+     <y>421</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbModifierMatiere</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbModifierMatiere_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>938</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>991</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>twProfesseurs</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_administration_selection_professeur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>570</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>621</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbAjouterProfesseur</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbAjouterProfesseur_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>617</x>
+     <y>694</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>990</x>
+     <y>583</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSupprimerProfesseur</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbSupprimerProfesseur_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>778</x>
+     <y>694</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>987</x>
+     <y>630</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbModifierProfesseur</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbModifierProfesseur_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>938</x>
+     <y>694</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>989</x>
+     <y>676</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>twAdministrationEleves</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_administration_selection_eleve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>802</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>858</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbAjouterEleve</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbAjouterEleve_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>618</x>
+     <y>944</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>988</x>
+     <y>836</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSupprimerEleve</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbSupprimerEleve_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>778</x>
+     <y>944</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>985</x>
+     <y>875</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbModifierEleve</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbModifierEleve_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>938</x>
+     <y>944</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>989</x>
+     <y>934</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Dialog</sender>
+   <signal>finished(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>492</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbIdentificationProfesseur</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_professeur_identification(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>366</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>373</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbAjouterDevoir</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbAjouterDevoir_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>713</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSupprimerDevoir</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbSupprimerDevoir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>713</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>713</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbSelectionClasseProfesseur</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_identification_classe_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>615</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>-10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbSelectionMatiereProfesseur</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_identification_matiere_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>992</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>934</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbEnregistrerNotes</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>pbEnregistrerNotes_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>713</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1021</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbDevoirSelectionDevoirEnregistrerNotes</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_selection_devoir_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leNouveauDevoir</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_ajouter_devoir_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbSelectionDevoirSupprimer</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_supprimer_devoir_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbAssociationProfesseur</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_association_identification_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>356</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbSelectionClasseEleve</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_eleve_classe(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbIdentificationEleve</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_eleve_identification(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbSelectionMatiereEleve</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_eleve_matiere(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>892</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabApplication</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_change_tab(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>283</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_change_annee(QString)</slot>
+  <slot>pbSupprimerClasse_clicked()</slot>
+  <slot>pbAjouterClasse_clicked()</slot>
+  <slot>on_change_niveau(QString)</slot>
+  <slot>on_administration_selection_classe()</slot>
+  <slot>pbModifierClasse_clicked()</slot>
+  <slot>on_administration_selection_matiere()</slot>
+  <slot>pbAjouterMatiere_clicked()</slot>
+  <slot>pbSupprimerMatiere_clicked()</slot>
+  <slot>pbModifierMatiere_clicked()</slot>
+  <slot>on_administration_selection_professeur()</slot>
+  <slot>pbAjouterProfesseur_clicked()</slot>
+  <slot>pbModifierProfesseur_clicked()</slot>
+  <slot>pbSupprimerProfesseur_clicked()</slot>
+  <slot>on_administration_selection_eleve()</slot>
+  <slot>pbAjouterEleve_clicked()</slot>
+  <slot>pbSupprimerEleve_clicked()</slot>
+  <slot>pbModifierEleve_clicked()</slot>
+  <slot>on_close()</slot>
+  <slot>on_professeur_identification(QString)</slot>
+  <slot>pbAjouterDevoir_clicked()</slot>
+  <slot>pbSupprimerDevoir()</slot>
+  <slot>on_identification_classe_changed(QString)</slot>
+  <slot>on_identification_matiere_changed(QString)</slot>
+  <slot>pbEnregistrerNotes_clicked()</slot>
+  <slot>on_supprimer_devoir_changed(QString)</slot>
+  <slot>on_selection_devoir_changed(QString)</slot>
+  <slot>on_ajouter_devoir_changed(QString)</slot>
+  <slot>on_association_identification_changed(QString)</slot>
+  <slot>pbEnregistrerAssociations()</slot>
+  <slot>on_eleve_classe(QString)</slot>
+  <slot>on_eleve_identification(QString)</slot>
+  <slot>on_eleve_matiere(QString)</slot>
+  <slot>on_change_tab(int)</slot>
+ </slots>
+</ui>
